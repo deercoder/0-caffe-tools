@@ -1,1 +1,9 @@
 n07639069 donut
+n07663899 cake
+n07697537 hotdog
+n07698672 sandwich
+n07730207 carrot
+n07739125 apple
+n07747607 orange
+n07753592 banana
+n07873807 pizza
