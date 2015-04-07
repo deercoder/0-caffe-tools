@@ -1,0 +1,6 @@
+*.binaryproto
+image/
+*.jpeg
+*.jpg
+*.mdb
+*.caffemodel
