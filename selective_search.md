@@ -2,6 +2,13 @@ Selective Search
 ===
 
 
+
+### **Description**
+
+**SelectiveSearchPcode**: old code, check `demo.m`
+**SelectiveSearchCodeIJCV**: new code, check `demoPascal2007.m`
+
+
 ### **Abstract**
 Selective search is a very important process in the R-CNN's algorithm, since the first step is to generate the VOC2007_train.mat/VOC2007_test.mat, so I have to generate my own dataset's `.mat` file.
 
