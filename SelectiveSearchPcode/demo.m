@@ -3,6 +3,10 @@
 %   K. van de Sande, J. Uijlings, T. Gevers, A. Smeulders, ICCV 2011
 %%
 
+addpath('/data3/users/cliu/data1_backup/chang/rcnn/VOC2007');
+addpath('/data3/users/cliu/data1_backup/chang/rcnn/VOC2007/JPEGImages');
+addpath('/data3/users/cliu/data1_backup/chang/rcnn/selective_search/SelectiveSearchPcode');
+
 fprintf('Demo of how to run the code for:\n');
 fprintf('   K. van de Sande, J. Uijlings, T. Gevers, A. Smeulders\n');
 fprintf('   Segmentation as Selective Search for Object Recognition\n');
@@ -50,9 +54,9 @@ images = {'000015.jpg'};
 %%%
 %%% Alternatively, do it on the whole set. (Un)comment line 67/68
 %%%
-% VOCinit;
-% theSet = 'test'
-% [images, labs] = textread(sprintf(VOCopts.imgsetpath, theSet), '%s %s');
+VOCinit;
+theSet = 'test';
+[images, labs] = textread(sprintf(VOCopts.imgsetpath, theSet), '%s %s');
 
 % For each image do Selective Search
 fprintf('Performing selective search: ');
@@ -64,8 +68,8 @@ for i=1:length(images)
     end
     idx = 1;
     currBox = cell(1, numHierarchy);
-    im = imread(images{i});
-    %im = imread(sprintf(VOCopts.imgpath, images{i})); % For Pascal Data
+    %im = imread(sprintf('%s.jpg', images{i})); % comment by chang
+    im = imread(sprintf(VOCopts.imgpath, images{i})); % For Pascal Data
     for k = kThresholds
         minSize = k; % We use minSize = k.
         
