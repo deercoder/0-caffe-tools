@@ -55,7 +55,7 @@ images = {'000015.jpg'};
 %%% Alternatively, do it on the whole set. (Un)comment line 67/68
 %%%
 VOCinit;
-theSet = 'test';
+theSet = 'train';
 [images, labs] = textread(sprintf(VOCopts.imgsetpath, theSet), '%s %s');
 
 % For each image do Selective Search
@@ -86,48 +86,113 @@ for i=1:length(images)
 end
 fprintf('Elapsed time: %f seconds\n', toc);
 
-%% Show a couple of good boxes in the image
-fprintf('Showing examples of good boxes\n');
-goodBoxes = boxes{1}([48 1075 808 762 467 445], :);
-figure; 
-for i=1:6
-    subplot(2, 3, i);
-    boxIm = im(goodBoxes(i,1):goodBoxes(i,3), goodBoxes(i,2):goodBoxes(i,4), :);
-    imshow(boxIm);
+
+VOCinit;
+theSet = 'val';
+[images1, labs1] = textread(sprintf(VOCopts.imgsetpath, theSet), '%s %s');
+
+% For each image do Selective Search
+fprintf('Performing selective search: ');
+tic;
+boxes1 = cell(1, length(images1));
+for i=1:length(images1)
+    if mod(i,100) == 0
+        fprintf('%d ', i);
+    end
+    idx = 1;
+    currBox = cell(1, numHierarchy);
+    %im = imread(sprintf('%s.jpg', images{i})); % comment by chang
+    im = imread(sprintf(VOCopts.imgpath, images1{i})); % For Pascal Data
+    for k = kThresholds
+        minSize = k; % We use minSize = k.
+        
+        for colorTypeI = 1:length(colorTypes)
+            colorType = colorTypes{colorTypeI};
+            
+            currBox{idx} = SelectiveSearch(im, sigma, k, minSize, colorType);
+            idx = idx + 1;
+        end
+    end
+    
+    boxes1{i} = cat(1, currBox{:}); % Concatenate results of all hierarchies
+    boxes1{i} = unique(boxes1{i}, 'rows'); % Remove duplicate boxes
 end
+fprintf('Elapsed time: %f seconds\n', toc);
+
+VOCinit;
+theSet = 'trainval';
+[images2, labs2] = textread(sprintf(VOCopts.imgsetpath, theSet), '%s %s');
+
+% For each image do Selective Search
+fprintf('Performing selective search: ');
+tic;
+boxes2 = cell(1, length(images2));
+for i=1:length(images2)
+    if mod(i,100) == 0
+        fprintf('%d ', i);
+    end
+    idx = 1;
+    currBox = cell(1, numHierarchy);
+    %im = imread(sprintf('%s.jpg', images{i})); % comment by chang
+    im = imread(sprintf(VOCopts.imgpath, images2{i})); % For Pascal Data
+    for k = kThresholds
+        minSize = k; % We use minSize = k.
+        
+        for colorTypeI = 1:length(colorTypes)
+            colorType = colorTypes{colorTypeI};
+            
+            currBox{idx} = SelectiveSearch(im, sigma, k, minSize, colorType);
+            idx = idx + 1;
+        end
+    end
+    
+    boxes2{i} = cat(1, currBox{:}); % Concatenate results of all hierarchies
+    boxes2{i} = unique(boxes2{i}, 'rows'); % Remove duplicate boxes
+end
+fprintf('Elapsed time: %f seconds\n', toc);
+
+%% Show a couple of good boxes in the image
+% fprintf('Showing examples of good boxes\n');
+% goodBoxes = boxes{1}([48 1075 808 762 467 445], :);
+% figure; 
+% for i=1:6
+%     subplot(2, 3, i);
+%     boxIm = im(goodBoxes(i,1):goodBoxes(i,3), goodBoxes(i,2):goodBoxes(i,4), :);
+%     imshow(boxIm);
+% end
 
 %%
 % Test overlap scores Pascal 2007 test
-if exist('SelectiveSearchVOC2007test.mat')
-    load GroundTruthVOC2007test.mat; % Load ground truth boxes
-    load SelectiveSearchVOC2007test.mat; % Load selective search boxes
-
-    % Remove small boxes
-    for i=1:length(boxes)
-        [nR nC] = BoxSize(boxes{i});
-        keepIdx = min(nR, nC) > 20;% Keep boxes with width/height > 20 pixels
-        boxes{i} = boxes{i}(keepIdx,:);
-        numberBoxes(i) = size(boxes{i},1);
-    end
-
-    % Get for each ground truth box the best Pascal Overlap Score
-    maxScores = MaxOverlapScores(gtBoxes, gtImIds, boxes);
-
-    % Get recall per class
-    for cI=1:length(maxScores)
-        recall(cI) = sum(maxScores{cI} > 0.5) ./ length(maxScores{cI});
-        averageBestOverlap(cI) = mean(maxScores{cI});
-    end
-
-    recall
-    fprintf('Number of boxes per image: %.0f\nMean Average Best Overlap: %f\nMean Recall: %f\n', mean(numberBoxes), mean(averageBestOverlap), mean(recall));
-end
-    
+% if exist('SelectiveSearchVOC2007test.mat')
+%     load GroundTruthVOC2007test.mat; % Load ground truth boxes
+%     load SelectiveSearchVOC2007test.mat; % Load selective search boxes
+% 
+%     % Remove small boxes
+%     for i=1:length(boxes)
+%         [nR nC] = BoxSize(boxes{i});
+%         keepIdx = min(nR, nC) > 20;% Keep boxes with width/height > 20 pixels
+%         boxes{i} = boxes{i}(keepIdx,:);
+%         numberBoxes(i) = size(boxes{i},1);
+%     end
+% 
+%     % Get for each ground truth box the best Pascal Overlap Score
+%     maxScores = MaxOverlapScores(gtBoxes, gtImIds, boxes);
+% 
+%     % Get recall per class
+%     for cI=1:length(maxScores)
+%         recall(cI) = sum(maxScores{cI} > 0.5) ./ length(maxScores{cI});
+%         averageBestOverlap(cI) = mean(maxScores{cI});
+%     end
+% 
+%     recall
+%     fprintf('Number of boxes per image: %.0f\nMean Average Best Overlap: %f\nMean Recall: %f\n', mean(numberBoxes), mean(averageBestOverlap), mean(recall));
+% end
+%     
 %% Example of segmentation
 % sigma = 0.8
 % k = 100
 % minSize = 200
-segIndIm = mexFelzenSegmentIndex(im, 0.8, 100, 200);
+% segIndIm = mexFelzenSegmentIndex(im, 0.8, 100, 200);
 
 % segIndIm has the same number of rows and columns as im. The range of 
 % segIndIm is 1:S, where S is the number of segments: Each number
