@@ -1,0 +1,1000 @@
+ 1164  rm log.txt 
+ 1165  ls
+ 1166  cd data/
+ 1167  ls
+ 1168  cd test/
+ 1169  ls
+ 1170  cd images/
+ 1171  ls
+ 1172  ls -l | wc
+ 1173  ls > a.txt
+ 1174  ls
+ 1175  vim a.txt 
+ 1176  ls
+ 1177  cd ..
+ 1178  ls
+ 1179  cd old-small-handmade-backup-config/
+ 1180  ls
+ 1181  cd ..
+ 1182  ls
+ 1183  cd coco-16000-backup/
+ 1184  ls
+ 1185  cd images/
+ 1186  ls
+ 1187  ls > a.txt
+ 1188  ls
+ 1189  vim a.txt 
+ 1190  ls
+ 1191  cd ..
+ 1192  ls
+ 1193  cd ..
+ 1194  ls
+ 1195  cp images/ old-small-handmade-backup-config/
+ 1196  mv images/ old-small-handmade-backup-config/
+ 1197  ls
+ 1198  mv test.txt train.txt old-small-handmade-backup-config/
+ 1199  ls
+ 1200  cd old-small-handmade-backup-config/
+ 1201  ls
+ 1202  cd images/
+ 1203  ls
+ 1204  vim a.txt 
+ 1205  ls
+ 1206  cd ..
+ 1207  ls
+ 1208  vim test.txt 
+ 1209  ls
+ 1210  touch README.md
+ 1211  ls
+ 1212  vim README.md 
+ 1213  ls
+ 1214  mv images/a.txt .
+ 1215  ls
+ 1216  mv a.txt image.txt
+ 1217  ls
+ 1218  vim image.txt 
+ 1219  ls
+ 1220  cd ..
+ 1221  ls
+ 1222  cd coco-16000-backup/
+ 1223  ls
+ 1224  vim README.md 
+ 1225  ls
+ 1226  vim test.txt 
+ 1227  vim train.txt 
+ 1228  ls
+ 1229  cp -r images/ ..
+ 1230  ls
+ 1231  cp test.txt train.txt ..
+ 1232  ls
+ 1233  cd ..
+ 1234  ls
+ 1235  cd coco-16000-backup/
+ 1236  ls
+ 1237  cd images/
+ 1238  ls
+ 1239  vim a.txt 
+ 1240  ls
+ 1241  vim a.txt 
+ 1242  ls
+ 1243  cd ..
+ 1244  ls
+ 1245  mv images/a.txt .
+ 1246  ls
+ 1247  mv a.txt images.txt
+ 1248  ls
+ 1249  vim images
+ 1250  ls
+ 1251  vim images.txt 
+ 1252  ls
+ 1253  cd ..
+ 1254  ls
+ 1255  vim test.txt 
+ 1256  vim train.txt 
+ 1257  ls
+ 1258  vim train.txt 
+ 1259  cd ..
+ 1260  ls
+ 1261  cd ..
+ 1262  ls
+ 1263  history | grep caffe
+ 1264  ./build/tools/caffe train -solver models/finetune_googlenet/solver.prototxt -weights models/bvlc_googlenet/bvlc_googlenet.caffemodel -gpu 0 2>&1 | tee log.txt
+ 1265  ls
+ 1266  cd models/
+ 1267  ls
+ 1268  cd finetune_googlenet/
+ 1269  ls
+ 1270  cd ..
+ 1271  ls
+ 1272  cd ..
+ 1273  ls
+ 1274  ./scripts/download_model_binary.py models/bvlc_reference_caffenet/
+ 1275  ls
+ 1276  cd ~/cliu2/
+ 1277  ls
+ 1278  cd caffe
+ 1279  ls
+ 1280  cd mydemo/
+ 1281  ls
+ 1282  python 00-classification.py 
+ 1283  ls
+ 1284  vim 00-classification.py 
+ 1285  ls
+ 1286  python 00-classification.py 
+ 1287  ls
+ 1288  vim 00-classification.py 
+ 1289  vim 00-classification.py 2>& | tee log.txt
+ 1290  python 00-classification.py 2>& | tee log.txt
+ 1291  history | grep tee
+ 1292  python 00-classification.py 2>&1 | tee log.txt
+ 1293  ls
+ 1294  vim log.txt 
+ 1295  ls
+ 1296  s
+ 1297  ls
+ 1298  vim 00-classification.py 
+ 1299  fg
+ 1300  ls
+ 1301  vim use_model.py 
+ 1302  ls
+ 1303  jobs
+ 1304  fg
+ 1305  ls
+ 1306  chmod +rwx 00-classification.py 
+ 1307  ls
+ 1308  ./00-classification.py 
+ 1309  ls
+ 1310  vim 00-classification.py 
+ 1311  ls
+ 1312  vim 00-classification.py 
+ 1313  python 00-classification.py 
+ 1314  ls
+ 1315  vim 00-classification.py 
+ 1316  ls
+ 1317  cd ..
+ 1318  ls
+ 1319  ipython notebook examples/
+ 1320  ls
+ 1321  cd mydemo/
+ 1322  ls
+ 1323  vim 00-classification.py 
+ 1324  ls
+ 1325  vim 00-classification.py 
+ 1326  ls
+ 1327  vim 00-classification.py 
+ 1328  ls
+ 1329  vim 00-classification.py 
+ 1330  ls
+ 1331  cp 00-classification.py 01-classification.py 
+ 1332  ls
+ 1333  vim 01-classification.py 
+ 1334  ls
+ 1335  ls ..
+ 1336  ls ../models/finetune_googlenet/
+ 1337  fg
+ 1338  python 01-classification.py 
+ 1339  cd ..
+ 1340  ls
+ 1341  cd models/
+ 1342  ls
+ 1343  cd finetune_googlenet/
+ 1344  ls
+ 1345  cd ..
+ 1346  ls
+ 1347  cd finetune_flickr_style/
+ 1348  ls
+ 1349  cat deploy.prototxt 
+ 1350  vim solver.prototxt solver.prototxt 
+ 1351  vimdiff solver.prototxt train_val.prototxt 
+ 1352  vim solver.prototxt 
+ 1353  vim deploy.prototxt 
+ 1354  vimdiff deploy.prototxt train_val.prototxt 
+ 1355  ls
+ 1356  cd ..
+ 1357  ls
+ 1358  cd finetune_test/
+ 1359  ls
+ 1360  cd ..
+ 1361  ls
+ 1362  cd bvlc_reference_caffenet/
+ 1363  ls
+ 1364  vimdiff deploy.prototxt train_val.prototxt 
+ 1365  ls
+ 1366  cd ..
+ 1367  ls
+ 1368  cd bvlc_alexnet/
+ 1369  ls
+ 1370  vimdiff solver.prototxt train_val.prototxt 
+ 1371  vimdiff deploy.prototxt train_val.prototxt 
+ 1372  ls
+ 1373  cd ..
+ 1374  ls
+ 1375  cd ..
+ 1376  ls
+ 1377  cd mydemo/
+ 1378  ls
+ 1379  python 01-classification.py 
+ 1380  ls ../models/finetune_googlenet/finetune_googlenet_iter_120000.caffemodel 
+ 1381  vim 01-classification.py 
+ 1382  ls
+ 1383  python 01-classification.py 
+ 1384  ls
+ 1385  vim ../models/finetune_googlenet/deploy.prototxt 
+ 1386  python 01-classification.py 
+ 1387  ls
+ 1388  vim ../models/finetune_googlenet/deploy.prototxt 
+ 1389  ls
+ 1390  python 01-classification.py 
+ 1391  vim 01-classification.py 
+ 1392  python 01-classification.py
+ 1393  ls
+ 1394  vim ../models/finetune_googlenet/train_val.prototxt 
+ 1395  ls
+ 1396  vim ../models/finetune_googlenet/train_val.prototxt 
+ 1397  python 01-classification.py 
+ 1398  vim 01-classification.py 
+ 1399  python 01-classification.py
+ 1400  vim .ls
+ 1401  ls
+ 1402  vim ../models/finetune_googlenet/deploy.prototxt 
+ 1403  vim 01-classification.py 
+ 1404  python 01-classification.py
+ 1405  vim 01-classification.py 
+ 1406  python 01-classification.py
+ 1407  ls
+ 1408  vim 01-classification.py 
+ 1409  ls
+ 1410  vim 01-classification.py 
+ 1411  python 01-classification.py 
+ 1412  mv ../examples/images/sandwith.jpg ../examples/image/sandwitch.jpg
+ 1413  cd ../examples/image
+ 1414  cd ../examples/images/
+ 1415  ls
+ 1416  mv sandwith.jpg sandwitch.jpg
+ 1417  ls
+ 1418  cd ..
+ 1419  ls
+ 1420  cd mydemo/
+ 1421  ls
+ 1422  python 01-classification.py 
+ 1423  ls
+ 1424  cd ..
+ 1425  ls
+ 1426  cd data/
+ 1427  ls
+ 1428  cd test/
+ 1429  ls
+ 1430  vim test.txt 
+ 1431  ls
+ 1432  vim train.txt 
+ 1433  nautilus .
+ 1434  ls
+ 1435  vim ../../mydemo/01-classification.py 
+ 1436  ls
+ 1437  vim synset_words 
+ 1438  ls
+ 1439  ks
+ 1440  ls
+ 1441  cd ..
+ 1442  ls
+ 1443  cd ..
+ 1444  ls
+ 1445  cd airingzhang/deepnet/deepnet/examples/audio_with_prof_chen/
+ 1446  vim models/rbm3.pbtxt 
+ 1447  cd airingzhang/deepnet/deepnet/
+ 1448  vim dbm.py
+ 1449  rm extract_rbm_samples.py 
+ 1450  vim extract_rbm_samples.py
+ 1451  vim dbm.py
+ 1452  vim extract_rbm_samples.py 
+ 1453  vim dbm.py
+ 1454  rm dbm.py
+ 1455  vim dbm.py
+ 1456  vim extract_rbm_samples.py 
+ 1457  vim sparse_code
+ 1458  cd /data3/users/nzhang/flickr/dbn_reps_2/split_1/
+ 1459  ls
+ 1460  cd ../../dbn_models_2/
+ 1461  ls
+ 1462  cd classifiers/
+ 1463  ls
+ 1464  cd split_1/
+ 1465  ls
+ 1466  ls -l
+ 1467  ls
+ 1468  cd ..
+ 1469  ls
+ 1470  cd ../../joint_rbm_reps/
+ 1471  ls
+ 1472  cd splits/split_1/
+ 1473  ls
+ 1474  python
+ 1475  ls
+ 1476  vim data.pbtxt 
+ 1477  cd /data3/users/nzhang/
+ 1478  ls
+ 1479  mkdir audio_eating_2/
+ 1480  cd audio_eating
+ 1481  cd ../audio_eating_2/
+ 1482  ls
+ 1483  pwd
+ 1484  ls
+ 1485  cd Nto1Data/
+ 1486  ls
+ 1487  cd test/
+ 1488  ls
+ 1489  cd Environment/
+ 1490  ls
+ 1491  ls -l
+ 1492  python 
+ 1493  cd ../../
+ 1494  ls
+ 1495  cd train/
+ 1496  ls
+ 1497  cd Environment/
+ 1498  ls
+ 1499  ls -l
+ 1500  cd ../../validation/Environment/
+ 1501  ls -l
+ 1502  cd ../..
+ 1503  ls
+ 1504  cd t
+ 1505  cd test/
+ 1506  ls
+ 1507  mkdir combined
+ 1508  cp Eating/* combined/
+ 1509  cp -r Eating/* combined/
+ 1510  cd combined/
+ 1511  ls
+ 1512  cd label/
+ 1513  ls
+ 1514  cd ../..
+ 1515  cp Environment/*.npy combined/
+ 1516  cp Environment/label/* combined/label/
+ 1517  cd ../
+ 1518  ls
+ 1519  cd train/
+ 1520  mkdir combined
+ 1521  cp -r Eating/* combined/
+ 1522  cp Environment/*.npy combined/
+ 1523  cp Environment/label/* combined/label/
+ 1524  cd ../validation/
+ 1525  mkdir combined
+ 1526  cp -r Eating/* combined/
+ 1527  cd combined/
+ 1528  ls
+ 1529  cd label/
+ 1530  ls
+ 1531  cd ../../../test/
+ 1532  cd combined/
+ 1533  ls
+ 1534  cd label/
+ 1535  ls
+ 1536  cd ../../../train/
+ 1537  cd combined/
+ 1538  ls
+ 1539  cd label/
+ 1540  s
+ 1541  ls
+ 1542  cd ../../../
+ 1543  ls
+ 1544  eating.pbtxt
+ 1545  vim eating.pbtxt
+ 1546  ls
+ 1547  cd models/combined/
+ 1548  ls
+ 1549  cd ../../reps/combined/
+ 1550  ls
+ 1551  cd rbm1_LAST/
+ 1552  ls
+ 1553  vim data.pbtxt 
+ 1554  cd ../../../..
+ 1555  cd ..
+ 1556  cd flickr/
+ 1557  ls
+ 1558  cd splits/
+ 1559  ls
+ 1560  python
+ 1561  ls
+ 1562  cd ../dbn_reps_2/
+ 1563  ls
+ 1564  cd split_1/
+ 1565  ls
+ 1566  cd airingzhang/deepnet/deepnet/examples/audio_with_prof_chen/
+ 1567  cd models/
+ 1568  vim rbm1.pbtxt 
+ 1569  vim ../trainers/train_rbm1.pbtxt 
+ 1570  vim rbm1.pbtxt 
+ 1571  vim ../runall.sh 
+ 1572  cd /data3/users/nzhang/flickr/joint_rbm_reps/
+ 1573  ls
+ 1574  cd splits/
+ 1575  ls
+ 1576  python 
+ 1577  ls
+ 1578  cd split_
+ 1579  cd split_1
+ 1580  ls
+ 1581  vim data.pbtxt 
+ 1582  cd ../../..
+ 1583  cd ..
+ 1584  cd audio_eating_2/
+ 1585  cd Nto1Data/
+ 1586  ls
+ 1587  cd reps/combined/
+ 1588  ls
+ 1589  cd rbm1_LAST/
+ 1590  ls
+ 1591  ls-l
+ 1592  ls -l
+ 1593  cd airingzhang/deepnet/deepnet/
+ 1594  vim dbm.py
+ 1595  ls
+ 1596  cp dbm.py dbm.py.bak
+ 1597  rm dbm.py
+ 1598  vim dbm.py
+ 1599  vim dbm.py.bak 
+ 1600  vim extract_rbm_samples.py 
+ 1601  rm dbm.py
+ 1602  vim dbm.py
+ 1603  cd examples/multimodal_dbn_bak/
+ 1604  ls
+ 1605  vim temp.sh 
+ 1606  vim sample_test.sh 
+ 1607  vim models/joint_rbm_samples.pbtxt 
+ 1608  vim temp.sh 
+ 1609  vim split_reps.py 
+ 1610  vim temp.sh 
+ 1611  vim split_reps.py 
+ 1612  vim temp.sh 
+ 1613  vim split_reps.py 
+ 1614  ls
+ 1615  vim split_reps.py 
+ 1616  vim temp.sh 
+ 1617  cd models/
+ 1618  ls
+ 1619  cd classifiers/
+ 1620  ls
+ 1621  mkdir retrain
+ 1622  vim retrain/joint_hidden_retrained_classifier.pbtxt
+ 1623  cd ../../trainers/classifiers/
+ 1624  ls
+ 1625  vim split_1.pbtxt 
+ 1626  cd -
+ 1627  vim retrain/joint_hidden_retrained_classifier.pbtxt 
+ 1628  ls
+ 1629  cd -
+ 1630  ls
+ 1631  vim split_1.pbtxt 
+ 1632  cd -
+ 1633  vim retrain/joint_hidden_retrained_classifier.pbtxt 
+ 1634  rm retrain/joint_hidden_retrained_classifier.pbtxt 
+ 1635  vim retrain/joint_hidden_retrained_classifier.pbtxt 
+ 1636  cd -
+ 1637  ls
+ 1638  vim split_
+ 1639  vim split_1.pbtxt 
+ 1640  mkdir retrained
+ 1641  vim retrained/split_1.pbtxt
+ 1642  cp split_1.pbtxt retrained/split_1.pbtxt
+ 1643  vim retrained/split_1.pbtxt
+ 1644  cd -
+ 1645  ls
+ 1646  cd retrain/
+ 1647  pwd
+ 1648  ls
+ 1649  cd ..
+ 1650  ls
+ 1651  vim joint_hidden_classifier.pbtxt 
+ 1652  vim ../../trainers/classifiers/
+ 1653  vim ../../trainers/classifiers/split_1.pbtxt 
+ 1654  vim retrain/joint_hidden_retrained_classifier.pbtxt 
+ 1655  vim retrain/joint_hidden_retrained_classifier2.pbtxt 
+ 1656  cp retrain/joint_hidden_retrained_classifier.pbtxt retrain/joint_hidden_retrained_classifier2.pbtxt 
+ 1657  vim retrain/joint_hidden_retrained_classifier2.pbtxt 
+ 1658  cd retrain/
+ 1659  ls
+ 1660  rm joint_hidden_retrained_classifier2.pbtxt 
+ 1661  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1662  rm joint_hidden_retrained_classifier2.pbtxt 
+ 1663  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1664  vim ../../../../../neuralnet.py
+ 1665  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1666  vim ../../../../../neuralnet.py
+ 1667  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1668  vim ../../../trainers/classifiers/retrain/split_1.pbtxt 
+ 1669  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1670  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1671  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1672  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1673  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1674  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1675  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1676  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1677  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1678  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1679  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1680  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1681  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1682  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1683  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1684  vim ../../../trainers/classifiers/retrain/split_1.pbtxt
+ 1685  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1686  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1687  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1688  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1689  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1690  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1691  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1692  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1693  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1694  vim ../../../trainers/classifiers/retrain/split_1.pbtxt
+ 1695  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1696  vim ../../../trainers/classifiers/retrain/split_1.pbtxt
+ 1697  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1698  vim ../../../trainers/classifiers/retrain/split_1.pbtxt
+ 1699  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1700  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1701  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1702  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1703  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1704  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1705  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1706  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1707  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1708  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1709  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1710  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1711  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1712  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1713  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1714  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1715  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1716  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1717  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1718  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1719  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1720  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1721  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1722  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1723  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1724  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1725  cp /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py.bak
+ 1726  rm /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1727  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1728  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1729  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1730  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1731  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1732  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1733  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1734  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1735  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1736  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1737  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1738  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1739  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1740  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1741  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1742  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1743  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1744  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1745  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1746  rm /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1747  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1748  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1749  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1750  ls
+ 1751  cd ..
+ 1752  ls
+ 1753  cd coco/
+ 1754  ls
+ 1755  cd ..
+ 1756  ls
+ 1757  cd caffe
+ 1758  ls
+ 1759  ls -al log.txt 
+ 1760  ls
+ 1761  ls -al
+ 1762  ls -alh log.txt 
+ 1763  ls
+ 1764  tmux detach
+ 1765  vim log.txt 
+ 1766  ls
+ 1767  vim log.txt 
+ 1768  ls
+ 1769  ls -al log.txt 
+ 1770  ls -alh log.txt 
+ 1771  ls
+ 1772  cd models/
+ 1773  ls
+ 1774  cd finetune_googlenet/
+ 1775  ls
+ 1776  vim solver.prototxt 
+ 1777  ls
+ 1778  vim train_val.prototxt 
+ 1779  ls
+ 1780  cd ..
+ 1781  ls
+ 1782  cd ..
+ 1783  ls
+ 1784  vim log.txt 
+ 1785  ls
+ 1786  cd models/finetune_googlenet/
+ 1787  ls
+ 1788  cd ..
+ 1789  ls
+ 1790  cd ..
+ 1791  ls
+ 1792  vim log.txt 
+ 1793  ls
+ 1794  vim log.txt 
+ 1795  ls
+ 1796  vim log.txt 
+ 1797  ls
+ 1798  cd /data3/users/nzhang/audio_eating/
+ 1799  ls
+ 1800  vim eating.pbtxt 
+ 1801  cd ~/airingzhang/deepnet/deepnet/
+ 1802  vim edge.py
+ 1803  cd examples/multimodal_dbn_bak/
+ 1804  ls
+ 1805  sh temp.sh 
+ 1806  vim trainers/classifiers/split_1.pbtxt
+ 1807  vim models/classifiers/joint_hidden_classifier.pbtxt 
+ 1808  vim trainers/classifiers/split_1.pbtxt
+ 1809  vim models/classifiers/joint_hidden_classifier.pbtxt 
+ 1810  vim trainers/classifiers/split_1.pbtxt
+ 1811  vim /data3/users/nzhang/flickr/dbn_reps_2/split_1/data.pbtxt 
+ 1812  vim temp.sh 
+ 1813  sh temp.sh 
+ 1814  vim temp.sh 
+ 1815  sh temp.sh 
+ 1816  vim temp.sh cd ../audio_with_prof_chen/
+ 1817  cd ../audio_with_prof_chen/
+ 1818  s
+ 1819  ls
+ 1820  cd models/
+ 1821  ls
+ 1822  vim rbm1.pbtxt 
+ 1823  vim rbm2.pbtxt 
+ 1824  vim rbm3.pbtxt 
+ 1825  vim dnn.pbtxt 
+ 1826  cd ../trainers/
+ 1827  vim train_rbm1.pbtxt 
+ 1828  vim train_rbm2.pbtxt 
+ 1829  vim train_rbm3.pbtxt 
+ 1830  vim train_dnn.pbtxt 
+ 1831  vim train_rbm1.pbtxt 
+ 1832  vim train_rbm2.pbtxt 
+ 1833  vim train_rbm3.pbtxt 
+ 1834  vim train_dnn.pbtxt 
+ 1835  cd ../models/
+ 1836  vim rbm1.pbtxt 
+ 1837  vim rbm2.pbtxt 
+ 1838  vim dnn.pbtxt 
+ 1839  cd ..
+ 1840  vim runall.sh 
+ 1841  sh runall.sh 
+ 1842  vim runall.sh 
+ 1843  ls
+ 1844  vim runall
+ 1845  vim runall.sh 
+ 1846  python $AIRING_HOME/deepnet/deepnet/extract_rbm_representation.py   /data3/users/nzhang/audio_eating_2/Nto1Data/models/combinedrbm1_LAST trainers/train_rbm1.pbtxt hidden1   /data3/users/nzhang/audio_eating_2/Nto1Data/reps/rbm1_LAST 4G 20G 
+ 1847  python $AIRING_HOME/deepnet/deepnet/extract_rbm_representation.py   /data3/users/nzhang/audio_eating_2/Nto1Data/models/combined/rbm1_LAST trainers/train_rbm1.pbtxt hidden1   /data3/users/nzhang/audio_eating_2/Nto1Data/reps/combined/rbm1_LAST 4G 20G 
+ 1848  python $AIRING_HOME/deepnet/deepnet/extract_rbm_representation.py   /data3/users/nzhang/audio_eating_2/Nto1Data/models/combined/rbm2_LAST trainers/train_rbm2.pbtxt hidden1   /data3/users/nzhang/audio_eating_2/Nto1Data/reps/combined/rbm2_LAST 4G 20G 
+ 1849  vim runall.sh 
+ 1850  python $AIRING_HOME/deepnet/deepnet/extract_rbm_representation.py   /data3/users/nzhang/audio_eating_2/Nto1Data/models/combined/rbm2_LAST trainers/train_rbm2.pbtxt hidden2   /data3/users/nzhang/audio_eating_2/Nto1Data/reps/combined/rbm2_LAST 4G 20G 
+ 1851  sh runall.sh 
+ 1852  python $AIRING_HOME/deepnet/deepnet/extract_rbm_representation.py   /data3/users/nzhang/audio_eating_2/Nto1Data/models/combined/rbm3_LAST trainers/train_rbm3.pbtxt hidden2   /data3/users/nzhang/audio_eating_2/Nto1Data/reps/combined/rbm3_LAST 4G 20G 
+ 1853  sh runall.sh 
+ 1854  vim /home/ycao/airingzhang/deepnet/deepnet/neuralnet.py
+ 1855  sh runall.sh 
+ 1856  vim models/dnn.pbtxt 
+ 1857  vim models/rbm1.pbtxt 
+ 1858  vim models/rbm2.pbtxt 
+ 1859  vim models/rbm3.pbtxt 
+ 1860  vim models/dnn.pbtxt 
+ 1861  vim models/rbm3.pbtxt 
+ 1862  vim trainers/train_rbm1.pbtxt 
+ 1863  vim models/dnn.pbtxt 
+ 1864  vim trainers/train_rbm2.pbtxt 
+ 1865  vim trainers/train_rbm3.pbtxt 
+ 1866  vim trainers/train_dnn.pbtxt 
+ 1867  vim runall.sh 
+ 1868  sh runall.sh 
+ 1869  vim models/rbm1.pbtxt 
+ 1870  sh runall.sh 
+ 1871  cd cliu2/
+ 1872  ls
+ 1873  cd caffe
+ 1874  ls
+ 1875  cd models/
+ 1876  ls
+ 1877  cd finetune_googlenet/
+ 1878  ls
+ 1879  cd ..
+ 1880  ls
+ 1881  cd ..
+ 1882  ls
+ 1883  cd mydemo/
+ 1884  ls
+ 1885  vim 00-classification.py 
+ 1886  ls
+ 1887  python 00-classification.py 
+ 1888  history | grep log'
+ 1889  '
+ 1890  history | grep log
+ 1891  ls
+ 1892  cd ..
+ 1893  ls
+ 1894  vim log.txt 
+ 1895  ls
+ 1896  cd data/
+ 1897  ls
+ 1898  cd test/
+ 1899  ls
+ 1900  vim train.txt 
+ 1901  vim test.txt 
+ 1902  ls
+ 1903  cd cliu2/
+ 1904  l
+ 1905  cd caffe
+ 1906  ls
+ 1907  l
+ 1908  cd airingzhang/deepnet/deepnet/examples/multimodal_dbn_2
+ 1909  cd airingzhang/deepnet/deepnet/examples/multimodal_dbn_bak/
+ 1910  cd models/
+ 1911  ls
+ 1912  vim classifiers/retrain/joint_hidden_retrained_classifier.pbtxt 
+ 1913  cd classifiers/retrain/
+ 1914  ls
+ 1915  vim joint_hidden_retrained_classifier2.pbtxt 
+ 1916  cd /data3/users/nzhang/flickr/joint_rbm_reps/
+ 1917  ls
+ 1918  cd splits/split_1
+ 1919  ls
+ 1920  python
+ 1921  cd /data3/users/nzhang/flickr/
+ 1922  cd dbn_reps_2/
+ 1923  ls
+ 1924  cd split_1/
+ 1925  ls
+ 1926  cd airingzhang/deepnet/
+ 1927  ls
+ 1928  cd cudamat
+ 1929  ls
+ 1930  make clean
+ 1931  make
+ 1932  nosetests test_cudamat.py
+ 1933  cd ../deepnet/
+ 1934  vim neuralnet.py
+ 1935  cp neuralnet.py neuralnet.py.bak2
+ 1936  rm neuralnet.py
+ 1937  vim neuralnet.py
+ 1938  rm neuralnet.py
+ 1939  vim neuralnet.py
+ 1940  rm neuralnet.py
+ 1941  vim neuralnet.py
+ 1942  cd examples/multimodal_dbn_bak/
+ 1943  vim models/classifiers/retrain/joint_hidden_retrained_classifier2.pbtxt 
+ 1944  LS
+ 1945  ls
+ 1946  cd cliu2/
+ 1947  ls
+ 1948  cd caffe
+ 1949  ls
+ 1950  make all -j8
+ 1951  ls
+ 1952  history | grep caffe
+ 1953  ./build/tools/caffe train -solver models/finetune_googlenet/solver.prototxt -weights models/bvlc_googlenet/bvlc_googlenet.caffemodel -gpu 0 2>&1 | tee log2.txt
+ 1954  ls
+ 1955  exit
+ 1956  cd airingzhang/deepnet/deepnet/examples/multimodal_dbn
+ 1957  ls
+ 1958  sh temp.sh 
+ 1959  cd ../
+ 1960  cd multimodal_dbn_bak/
+ 1961  sh temp.sh 
+ 1962  vim models/classifiers/retrain/
+ 1963  vim models/classifiers/retrain/joint_hidden_retrained_classifier2.pbtxt 
+ 1964  sh temp.sh 
+ 1965  vim models/classifiers/retrain/joint_hidden_retrained_classifier2.pbtxt 
+ 1966  sh temp.sh 
+ 1967  vim models/classifiers/retrain/joint_hidden_retrained_classifier2.pbtxt 
+ 1968  sh temp.sh 
+ 1969  python
+ 1970  cd cliu2/
+ 1971  ls
+ 1972  tmux new-sesssion -s basic
+ 1973  tmux
+ 1974  tmux new-session -s basic
+ 1975  cd cliu
+ 1976  ls
+ 1977  cd ..
+ 1978  ls
+ 1979  cd cliu2/
+ 1980  ls
+ 1981  mkdir foodcam.mobi
+ 1982  cd foodcam.mobi/
+ 1983  ls
+ 1984  wget http://foodcam.mobi/dataset256.zip&
+ 1985  ls
+ 1986  cd cliu2/
+ 1987  ls
+ 1988  cd foodcam.mobi/
+ 1989  ls
+ 1990  tmux ls
+ 1991  tmux attach
+ 1992  ls
+ 1993  tmux ls
+ 1994  tmux attach
+ 1995  cd /data3/users/nzhang/flickr/joint_rbm_reps/
+ 1996  ls
+ 1997  cd splits/
+ 1998  cd split_1
+ 1999  ls
+ 2000  python 
+ 2001  ls
+ 2002  cd cliu2/
+ 2003  ls
+ 2004  cd foodcam.mobi/
+ 2005  ls
+ 2006  cd uecfood256_split/
+ 2007  ls
+ 2008  cd ..
+ 2009  ls
+ 2010  cd cd uecfood256_split/
+ 2011  ls
+ 2012  cd uecfood256_split/
+ 2013  ls
+ 2014  cd ..
+ 2015  ls
+ 2016  cd UECFOOD100/
+ 2017  ls
+ 2018  cd ..
+ 2019  ls
+ 2020  cd ..
+ 2021  ls
+ 2022  cd caffe
+ 2023  ls
+ 2024  cd mydemo/
+ 2025  cd ..
+ 2026  ls
+ 2027  cd models/
+ 2028  ls
+ 2029  cd finetune_googlenet_food/
+ 2030  ls
+ 2031  vim deploy.prototxt 
+ 2032  ls
+ 2033  vim solver.prototxt 
+ 2034  ls
+ 2035  vim train_val.prototxt 
+ 2036  ls
+ 2037  cd ..
+ 2038  ls
+ 2039  cd ..
+ 2040  ls
+ 2041  cd data/
+ 2042  ls
+ 2043  cd test/
+ 2044  ls
+ 2045  vim new_train.txt 
+ 2046  ls
+ 2047  vimdiff new_train.txt train.txt 
+ 2048  ls
+ 2049  cd UECFOOD256/
+ 2050  ls
+ 2051  cd ..
+ 2052  ls
+ 2053  cd uecfood256_split/
+ 2054  ls
+ 2055  vim train.txt 
+ 2056  cd ..
+ 2057  ls
+ 2058  cd ..
+ 2059  ls
+ 2060  cd ..
+ 2061  ls
+ 2062  cd caffe-tools/
+ 2063  ls
+ 2064  cd tools/
+ 2065  ls
+ 2066  cp ../../caffe/data/test/uecfood256_split/train.txt .
+ 2067  cp ../../caffe/data/test/uecfood256_split/val.txt .
+ 2068  ls
+ 2069  vim train.txt 
+ 2070  vim val.txt 
+ 2071  cp add_label.py add_label_uecfood.py
+ 2072  ls
+ 2073  vim add_label_uecfood.py 
+ 2074  python
+ 2075  ls
+ 2076  cat test.sh
+ 2077  ls
+ 2078  touch aaa.sh
+ 2079  ls
+ 2080  vim aaa.sh 
+ 2081  bash aaa.sh 
+ 2082  fg
+ 2083  vim aaa.sh 
+ 2084  bash aaa.sh 
+ 2085  fg
+ 2086  vim aaa.sh 
+ 2087  bash aaa.sh 
+ 2088  fg
+ 2089  vim aaa.sh 
+ 2090  bash aaa.sh 
+ 2091  fg
+ 2092  vim aaa.sh 
+ 2093  bash aaa.sh 
+ 2094  fg
+ 2095  vim aaa.sh 
+ 2096  bash aaa.sh 
+ 2097  bash aaa.sh > log.txt
+ 2098  ls
+ 2099  vim log.txt 
+ 2100  ls
+ 2101  vim add_label_uecfood.py 
+ 2102  fg
+ 2103  ls
+ 2104  vim train.txt 
+ 2105  ls
+ 2106  fg
+ 2107  ls
+ 2108  vim aaa.sh 
+ 2109  bash aaa.sh > log.txt 
+ 2110  ls
+ 2111  vim log.txt 
+ 2112  ls
+ 2113  vim add_label_uecfood.py 
+ 2114  fg
+ 2115  vim aaa.sh 
+ 2116  bash aaa.sh 
+ 2117  vim aaa.sh 
+ 2118  bash aaa.sh 
+ 2119  ls
+ 2120  vim aaa.sh 
+ 2121  bash aaa.sh 
+ 2122  bash aaa.sh > log.txt 
+ 2123  fg
+ 2124  ls
+ 2125  python add_label_uecfood.py 
+ 2126  ls
+ 2127  vim new_train.txt 
+ 2128  ls
+ 2129  vim add_label_uecfood.py 
+ 2130  python add_label_uecfood.py 
+ 2131  ls
+ 2132  vim new_train.txt 
+ 2133  ls
+ 2134  vim add_label_uecfood.py 
+ 2135  python add_label_uecfood.py 
+ 2136  ls
+ 2137  vim new_val.txt 
+ 2138  ls
+ 2139  cp new_val.txt new_train.txt ../../caffe/data/test/uecfood256_split/
+ 2140  cd ../../caffe/data/test/uecfood256_split/
+ 2141  ls
+ 2142  vim new_train.txt 
+ 2143  vim train.txt 
+ 2144  mkdir backup
+ 2145  ls
+ 2146  mv train.txt val.txt backup/
+ 2147  ls
+ 2148  cd ..
+ 2149  ls
+ 2150  cp test.txt train.txt ./uecfood256_split/
+ 2151  ls
+ 2152  cd uecfood256_split/
+ 2153  ls
+ 2154  vim train.txt 
+ 2155  ls
+ 2156  cat new_train.txt >> train.txt 
+ 2157  vim train.txt 
+ 2158  vim test.txt 
+ 2159  ls
+ 2160  cat new_val.txt >> test.txt 
+ 2161  vim test.txt 
+ 2162  ls
+ 2163  history >> data_processing
