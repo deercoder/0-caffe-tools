@@ -14,5 +14,9 @@ README
 ##RESULT
 
 for uec_test(coco+uec), top-1 ~ 49%, top-5 ~ 78%.
+
+
 for uec_256 wrong label(10 ~ 265 label): very low, top-1 ~ 2%, top-5 ~ 7% (This wrong label may have a very bad influence! see [NOTE](https://github.com/DeercoderResearch/caffe-tools/blob/cdd62fbef47d6725a2842ac68b899525136c5fb2/NOTE.md) )
+
+
 for uec_256 right label: To be seen
