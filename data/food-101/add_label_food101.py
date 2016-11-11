@@ -6,12 +6,12 @@ Description: This script is used for generating the label files for Caffe to tra
 	     Here we would like to use Food-101 dataset, using the ROOT/meta/train.txt to
 	     generate our desired format so that Caffe can recognize it.
 """
-#fileHandler = open('train.txt')
-fileHandler = open('test.txt')
-fileNewHandler = open('new_test.txt', 'w')
+fileHandler = open('train.txt')
+#fileHandler = open('test.txt')
+fileNewHandler = open('new_train.txt', 'w')
 
 fileList = fileHandler.readlines()
-prefix_path = "/home/ycao/cliu2/caffe/data/food-101/images/"
+prefix_path = "/data1/dataset/food-101/images/"
 
 # fetch the label from the classes.txt, that contains folder name
 labels = []

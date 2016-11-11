@@ -3,18 +3,18 @@ import sys
 import os
 import shutil
 
-PATH = '/home/ycao/cli/xray_images/'
+PATH = '/data1/dataset/xray/xray_images/'
 
-#src = ['LI', 'GH','CA', 'MI', 'AI', 'OT']
-#src_file_list = ['LI.list', 'GH.list', 'CA.list', 'MI.list', 'AI.list', 'OT.list']
-#label_file = ['xray_diagnose_train.txt', 'xray_diagnose_test.txt']
-#label_tag = [0, 1, 2, 3, 4, 5]
+src = ['LI', 'GH','CA', 'MI', 'AI', 'OT']
+src_file_list = ['LI.list', 'GH.list', 'CA.list', 'MI.list', 'AI.list', 'OT.list']
+label_file = ['xray_diagnose_train.txt', 'xray_diagnose_test.txt']
+label_tag = [0, 1, 2, 3, 4, 5]
 
 ## Now we don't use MI and GH since it has so small dataset of images.
-src = ['LI', 'CA', 'AI', 'OT']
-src_file_list = ['LI.list', 'CA.list', 'AI.list', 'OT.list']
-label_file = ['xray_diagnose_train.txt', 'xray_diagnose_test.txt']
-label_tag = [0, 1, 2, 3]
+#src = ['LI', 'CA', 'AI', 'OT']
+#src_file_list = ['LI.list', 'CA.list', 'AI.list', 'OT.list']
+#label_file = ['xray_diagnose_train.txt', 'xray_diagnose_test.txt']
+#label_tag = [0, 1, 2, 3]
 
 # create a folder that contains the images for training and testing
 # generate the label text files

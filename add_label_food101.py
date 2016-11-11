@@ -11,7 +11,7 @@ fileHandler = open('test.txt')
 fileNewHandler = open('new_test.txt', 'w')
 
 fileList = fileHandler.readlines()
-prefix_path = "/home/ycao/cliu2/caffe/data/food-101/images/"
+prefix_path = "/data1/dataset/food-101/images/"
 
 # fetch the label from the classes.txt, that contains folder name
 labels = []
