@@ -11,8 +11,8 @@ PATH = '/data1/dataset/xray/xray_images/'
 #label_tag = [0, 1, 2, 3, 4, 5]
 
 ## Now we don't use MI and GH since it has so small dataset of images.
-src = ['LI', 'CA', 'AI', 'OT']
-src_file_list = ['LI.list', 'CA.list', 'AI.list', 'OT.list']
+src = ['CA', 'OT', 'LI', 'AI']
+src_file_list = ['CA.list', 'OT.list', 'LI.list', 'AI.list']
 label_file = ['xray_diagnose_train.txt', 'xray_diagnose_test.txt']
 label_tag = [0, 1, 2, 3]
 
