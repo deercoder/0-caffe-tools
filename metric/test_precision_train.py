@@ -47,8 +47,8 @@ net.blobs['data'].reshape(50,        # batch size
 
 predict_array = []
 groundtruth_array = []
-test_file = open('/home/cliu/github/caffe-tools/data/xray/xray_diagnose_test.txt', "r+")
-#test_file = open('/home/cliu/github/caffe-tools/data/xray/xray_diagnose_train.txt', "r+")
+#test_file = open('/home/cliu/github/caffe-tools/data/xray/xray_diagnose_test.txt', "r+")
+test_file = open('/home/cliu/github/caffe-tools/data/xray/xray_diagnose_train.txt', "r+")
 
 for item in test_file.readlines():
 	img_name =  item.split(' ')
