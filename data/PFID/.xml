@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>PFID2009</folder>
+	<filename></filename>
+	<size>
+		<width>1944</width>
+		<height>2592</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Chicken Selects Breast Strips 
+</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>0</xmin>
+			<ymin>0</ymin>
+			<xmax>1944</xmax>
+			<ymax>2592</ymax>
+		</bndbox>
+	</object>
+</annotation>
