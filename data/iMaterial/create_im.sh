@@ -7,12 +7,12 @@ EXAMPLE=examples/iMaterial
 DATA=data/iMaterial
 TOOLS=build/tools
 
-TRAIN_DATA_ROOT=/home/roy/caffe/data/iMaterial/
-VAL_DATA_ROOT=/home/roy/caffe/data/iMaterial/
+TRAIN_DATA_ROOT=data/iMaterial/
+VAL_DATA_ROOT=data/iMaterial/
 
 # Set RESIZE=true to resize the images to 256x256. Leave as false if images have
 # already been resized using another tool.
-RESIZE=false
+RESIZE=true
 if $RESIZE; then
   RESIZE_HEIGHT=226
   RESIZE_WIDTH=226
