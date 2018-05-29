@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 
 import os
-import caffe
+#import caffe
 import os
 import numpy as np
 import skimage.io
 from skimage import img_as_float # using image from opencv with skimage
+from skimage.util import random_noise
+from skimage import transform
+from skimage.transform import AffineTransform
+from skimage.filters import gaussian
+from skimage.exposure import rescale_intensity
 import cv2
 import math
 import glob
@@ -17,6 +22,57 @@ def equaHist(img):
     img[:, :, 1] = cv2.equalizeHist(img[:, :, 1])
     img[:, :, 2] = cv2.equalizeHist(img[:, :, 2])
     return img
+
+# add new interface using skimage
+def sk_fliph(img):
+    return np.fliplr(img)
+
+def sk_flipv(img):
+    return np.flipud(img)
+
+# the parameter is not the sequence, so must use the specific KEY
+def sk_random_noise(img, mode = 'gaussian', rate = 0.01):
+    img_rn = random_noise(img, mode = "gaussian", var = 0.01)
+    return img_rn
+
+def sk_rotate(img, angle):
+    img_rt = transform.rotate(img, angle)
+    return img_rt
+
+def sk_translate(img, x, y):
+    img_trans = transform.warp(img, AffineTransform(translation=(-x, -y)))
+    return img_trans
+
+def sk_zoom(img, p1x, p1y, p2x, p2y):
+    h = len(img)
+    w = len(img[0])
+
+    crop_p1x = max(p1x, 0)
+    crop_p1y = max(p1y, 0)
+    crop_p2x = min(p2x, w)
+    crop_p2y = min(p2y, h)
+
+    cropped_img = img[crop_p1y:crop_p2y, crop_p1x:crop_p2x] 
+    x_pad_before = -min(0, p1x)
+    x_pad_after  =  max(0, p2x-w)
+    y_pad_before = -min(0, p1y)
+    y_pad_after  =  max(0, p2y-h)
+
+    padding = [(y_pad_before, y_pad_after), (x_pad_before, x_pad_after)]
+    is_color = len(img.shape) == 3
+    if is_color:
+        padding.append((0,0)) # colour images have an extra dimension
+
+    padded_img = np.pad(cropped_img, padding, 'constant')
+    return transform.resize(padded_img, (h,w))
+
+def sk_blur(img, sigma = 1.0):
+    is_color = len(img.shape) == 3
+    img_blur = rescale_intensity(gaussian(img, sigma=sigma, multichannel=is_color)) 
+    return img_blur
+
+# skimage implementation ends
+
 
 # flip horonzontally or vertically
 def flip(img, axis=1):
@@ -116,5 +172,34 @@ def main():
 
 	f.close()
 
+def test_sk_api():
+    img_path = "a.jpeg"
+    img = skimage.io.imread(img_path)
+    print img
+    # flip horizontal
+    img_fliph = sk_fliph(img)
+    skimage.io.imsave("a_fliph.jpeg", img_fliph)
+    # flip vertical
+    img_flipv = sk_flipv(img)
+    skimage.io.imsave("a_flipv.jpeg", img_flipv)
+    # random noise
+    img_rdnoise = sk_random_noise(img)
+    skimage.io.imsave("a_rdnoise.jpeg", img_rdnoise)
+    # rotate
+    img_rot = sk_rotate(img, 90)
+    skimage.io.imsave("a_rotate90.jpeg", img_rot)
+    # translate
+    img_trans = sk_translate(img, 20, 10)
+    skimage.io.imsave("a_trans_20_20.jpeg", img_trans)
+    # zoom
+    img_zoom = sk_zoom(img, 150, 0, 300, 150)
+    skimage.io.imsave("a_zoom.jpeg", img_zoom)
+    # blur
+    img_blur = sk_blur(img, 1.0)
+    skimage.io.imsave("a_blur.jpeg", img_blur)
+   
+
+
 if __name__ == "__main__":
-	main()
+#	main()
+	test_sk_api()
