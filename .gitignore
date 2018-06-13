@@ -4,6 +4,7 @@ image/
 *.jpg
 *.mdb
 *.caffemodel
+*.solverstate
 *.jpg
 *.JPG
 *.txt
