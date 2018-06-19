@@ -18,7 +18,7 @@ MODEL_FILE = 'bt-vgg-deploy.prototxt'
 PRETRAINED = '../snapshots/vgg_cnn_iter_500000.caffemodel'
 IMAGE_FILE = '/data3/users/roy/iMaterials-all/test/'
 
-caffe.set_mode_cpu()
+caffe.set_mode_gpu()
 caffe.set_device(1)
 net = caffe.Classifier(MODEL_FILE, PRETRAINED,
                        mean= None,

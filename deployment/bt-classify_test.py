@@ -18,7 +18,7 @@ MODEL_FILE = 'bt-deploy.prototxt'
 PRETRAINED = 'GoogleNet_cub_2011_4_iter_780000.caffemodel'
 IMAGE_FILE = '/data3/users/roy/iMaterials-all/test/'
 
-caffe.set_mode_cpu()
+caffe.set_mode_gpu()
 caffe.set_device(1)
 net = caffe.Classifier(MODEL_FILE, PRETRAINED,
                        mean= None,
